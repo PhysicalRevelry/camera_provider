@@ -26,4 +26,7 @@ class CameraController extends ChangeNotifier {
     SharedPreferences saveImage = await SharedPreferences.getInstance();
     imagePath = saveImage.getString("image path");
   }
+
+
+
 }
