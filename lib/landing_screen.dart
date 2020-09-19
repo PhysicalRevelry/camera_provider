@@ -15,9 +15,10 @@ class LandingScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Text("No Image Selected"),
+              //TODO The above should be if/then w image vs text
               RaisedButton(
                 onPressed: () {
-                  //dialog box with camera vs gallery options
+                  //TODO dialog box with camera vs gallery options
                 },
                 child: Text("Select Image!"),
               ),
@@ -27,5 +28,4 @@ class LandingScreen extends StatelessWidget {
       ),
     );
   }
-
 }

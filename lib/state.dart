@@ -8,13 +8,13 @@ class CameraController extends ChangeNotifier {
   //I don't think I use the following variable anywhere. Why was it in the tutorial?
   String imagePath;
 
-  void _openGallery(BuildContext context) async {
+  void openGallery(BuildContext context) async {
     // ignore: deprecated_member_use
     imageFile = await ImagePicker().getImage(source: ImageSource.gallery);
     Navigator.of(context).pop();
   }
 
-  void _openCamera(BuildContext context) async {
+  void openCamera(BuildContext context) async {
     // ignore: deprecated_member_use
     imageFile = await ImagePicker().getImage(source: ImageSource.camera);
     Navigator.of(context).pop();

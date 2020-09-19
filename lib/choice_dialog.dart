@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'landing_screen.dart';
+import 'state.dart';
+import 'package:provider/provider.dart';
+//import 'landing_screen.dart';
 
 class ChoiceDialog extends StatelessWidget {
   @override
@@ -12,7 +14,8 @@ class ChoiceDialog extends StatelessWidget {
             GestureDetector(
               child: Text('Gallery'),
               onTap: () {
-                //TODO open gallery
+                Provider.of<CameraController>(context, listen: false)
+                    .openCamera(context);
               },
             ),
             Padding(
@@ -21,7 +24,8 @@ class ChoiceDialog extends StatelessWidget {
             GestureDetector(
               child: Text("Camera"),
               onTap: () {
-                //TODO open camera
+                Provider.of<CameraController>(context, listen: false)
+                    .openGallery(context);
               },
             )
           ],
