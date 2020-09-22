@@ -17,9 +17,6 @@ class MyApp extends StatelessWidget {
         )
       ],
       child: MaterialApp(
-        routes: {
-          '/landing_screen': (context) => LandingScreen(),
-        },
         title: 'Flutter Demo',
         theme: ThemeData(
           primarySwatch: Colors.blue,

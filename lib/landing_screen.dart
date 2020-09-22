@@ -18,14 +18,9 @@ class LandingScreen extends StatelessWidget {
               return Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-//                  Provider.of<CameraController>(context, listen: false).decideImageView(),
                 controller.decideImageView(),
-//              Text("No Image Selected"),
-                  //TODO The above should be if/then w image vs text
                   RaisedButton(
                     onPressed: () {
-//                      Provider.of<CameraController>(context, listen: false)
-//                          .createDialogBox(context);
                     controller.createDialogBox(context);
                     },
                     child: Text("Select Image!"),
