@@ -15,7 +15,7 @@ class ChoiceDialog extends StatelessWidget {
               child: Text('Gallery'),
               onTap: () {
                 Provider.of<CameraController>(context, listen: false)
-                    .openCamera(context);
+                    .openGallery(context);
               },
             ),
             Padding(
@@ -25,7 +25,7 @@ class ChoiceDialog extends StatelessWidget {
               child: Text("Camera"),
               onTap: () {
                 Provider.of<CameraController>(context, listen: false)
-                    .openGallery(context);
+                    .openCamera(context);
               },
             )
           ],
@@ -34,3 +34,4 @@ class ChoiceDialog extends StatelessWidget {
     );
   }
 }
+

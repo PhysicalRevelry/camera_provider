@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:new_camera_tutorial/choice_dialog.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class CameraController extends ChangeNotifier {
@@ -27,6 +28,11 @@ class CameraController extends ChangeNotifier {
     imagePath = saveImage.getString("image path");
   }
 
+  Future<Widget> createDialogBox(BuildContext context) {
+    return showDialog(context: context, builder: (context){
+      return ChoiceDialog();
+    });
+  }
 
 
 }
