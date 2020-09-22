@@ -13,20 +13,26 @@ class LandingScreen extends StatelessWidget {
       ),
       body: Container(
         child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Text("No Image Selected"),
-              //TODO The above should be if/then w image vs text
-              RaisedButton(
-                onPressed: () {
-                  //TODO dialog box with camera vs gallery options
-                  Provider.of<CameraController>(context, listen: false)
-                      .createDialogBox(context);
-                },
-                child: Text("Select Image!"),
-              ),
-            ],
+          child: Consumer<CameraController>(
+            builder: (context, controller, _) {
+              return Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+//                  Provider.of<CameraController>(context, listen: false).decideImageView(),
+                controller.decideImageView(),
+//              Text("No Image Selected"),
+                  //TODO The above should be if/then w image vs text
+                  RaisedButton(
+                    onPressed: () {
+//                      Provider.of<CameraController>(context, listen: false)
+//                          .createDialogBox(context);
+                    controller.createDialogBox(context);
+                    },
+                    child: Text("Select Image!"),
+                  ),
+                ],
+              );
+            }
           ),
         ),
       ),
