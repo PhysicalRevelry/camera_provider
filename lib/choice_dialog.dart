@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'state.dart';
 import 'package:provider/provider.dart';
-//import 'landing_screen.dart';
 
 class ChoiceDialog extends StatelessWidget {
   @override
@@ -34,4 +33,3 @@ class ChoiceDialog extends StatelessWidget {
     );
   }
 }
-

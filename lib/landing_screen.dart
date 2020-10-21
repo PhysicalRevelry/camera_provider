@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:new_camera_tutorial/state.dart';
 import 'package:provider/provider.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class LandingScreen extends StatelessWidget {
   @override
@@ -13,22 +11,20 @@ class LandingScreen extends StatelessWidget {
       ),
       body: Container(
         child: Center(
-          child: Consumer<CameraController>(
-            builder: (context, controller, _) {
-              return Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
+          child: Consumer<CameraController>(builder: (context, controller, _) {
+            return Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
                 controller.decideImageView(),
-                  RaisedButton(
-                    onPressed: () {
+                RaisedButton(
+                  onPressed: () {
                     controller.createDialogBox(context);
-                    },
-                    child: Text("Select Image!"),
-                  ),
-                ],
-              );
-            }
-          ),
+                  },
+                  child: Text("Select Image!"),
+                ),
+              ],
+            );
+          }),
         ),
       ),
     );
