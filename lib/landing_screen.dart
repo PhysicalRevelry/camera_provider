@@ -18,7 +18,7 @@ class LandingScreen extends StatelessWidget {
                 controller.decideImageView(),
                 RaisedButton(
                   onPressed: () {
-                    controller.createDialogBox(context);
+                    controller.showChoiceDialog(context);
                   },
                   child: Text("Select Image!"),
                 ),

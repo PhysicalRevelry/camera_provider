@@ -21,7 +21,7 @@ class CameraController extends ChangeNotifier {
     notifyListeners();
   }
 
-  Future<Widget> createDialogBox(BuildContext context) {
+  Future<Widget> showChoiceDialog(BuildContext context) {
     return showDialog(
         context: context,
         builder: (context) {
